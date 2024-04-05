@@ -14,7 +14,7 @@
         <div class="conteiner">
             <div class="main__conteiner">
                 <ul class="main__menu">
-                    <li class="main__menu__item"><a href="#" class="main__menu__link">Главный</a></li>
+                    <li class="main__menu__item"><a href="index.html" class="main__menu__link">Главный</a></li>
                     <li class="main__menu__item"><a href="contact.html" class="main__menu__link">Контакты</a></li>
                 </ul>
                 <div class="main__email">
@@ -27,7 +27,26 @@
                     <div class="main__telephone__title">Телефон:</div>
                     <a href="tel:+79130666866" class="main__telephone__subtitle">+7 (913) 066 68 66</a>
                 </div>
-                <button class="main__btn">заказать звонок</button>
+                <button id="mybtn" class="main__btn main__left">Заказать звонок</button>
+                <div id="mymodal" class="main__modal">
+                    <div class="main__modal__content">
+                        <div class="main__modal__header">
+                            <span class="main__close">&times;</span>
+                            <h2 class="main__modal__header__title">ЗАКАЗАТЬ ЗВОНОК</h2>
+                            <p class="main__modal__header__subtitle">Заполните данные ниже и мы свяжемся с вами в ближайшее время</p>
+                        </div>
+                        <form action="php/send.php" method="POST" class="main__modal__form">
+                            <input type="text" name="name" placeholder="Введите имя" required>
+                            <input type="tel" name="tel" placeholder="Введите телефон" required>
+                            <input type="email" name="email" placeholder="Введите email" required>
+
+                            <input type="submit" value="Заказать звонок">
+                        </form>
+                        <div class="main__modal__footer">
+                            <h3 class="main__modal__footer__subtitle">Тут нужно текст придумать</h3>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -35,7 +54,6 @@
     <section class="promo">
         <div class="conteiner">
             <h1 class="promo__header">ТОКОРНО-ФРЕЗЕРНАЯ ГРУППА</h1>
-            <h2 class="promo__subheader">Описание</h2>
         </div>
     </section>
 
@@ -79,6 +97,7 @@
         <div class="conteiner">
         </div>
     </footer> -->
+    <script src="js/script-modal.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
